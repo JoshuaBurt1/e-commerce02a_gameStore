@@ -1,4 +1,4 @@
-namespace WorldDominion.Models
+namespace Mage.Models
 {
     public class ErrorViewModel
     {
