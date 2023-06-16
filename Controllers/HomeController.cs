@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WorldDominion.Models;
+using Mage.Models;
 
-namespace WorldDominion.Controllers
+namespace Mage.Controllers
 {
     public class HomeController : Controller
     {

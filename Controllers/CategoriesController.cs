@@ -1,41 +1,163 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WorldDominion.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Mage.Data;
+using Mage.Models;
 
-namespace WorldDominion.Controllers
+namespace Mage.Controllers
 {
     public class CategoriesController : Controller
     {
-        private List<Category> Categories { get; set; }
+        private readonly ApplicationDbContext _context;
 
-        public CategoriesController()
+        public CategoriesController(ApplicationDbContext context)
         {
-            Categories = new List<Category>()
+            _context = context;
+        }
+
+        // GET: Categories
+        public async Task<IActionResult> Index() //index page/view
+        {
+              return _context.Categories != null ? 
+                          View(await _context.Categories.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+        }
+
+        // GET: Categories/Details/5
+        public async Task<IActionResult> Details(int? id) //show page for category
+        {
+            if (id == null || _context.Categories == null)
             {
-                new Category { Id = 1, Name = "Dairy and Eggs", Description = "Find all the best milks and ovums" },
-                new Category { Id = 2, Name = "Fruits and Vegetables", Description = "Lettuce turn up the beet! It's kind of a big dill." },
-                new Category { Id = 3, Name = "Meats", Description = "We're a purveyor of fine meats." },
-            };
-        }
+                return NotFound();
+            }
 
-        public IActionResult Index()
-        {
-            return View(Categories);
-        }
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (category == null)
+            {
+                return NotFound();
+            }
 
-        public IActionResult Browse(int Id) //returns a view
-        {
-            var category = Categories.Find(category => category.Id == Id); //lambda, function that passes an argument into to a function 
             return View(category);
         }
 
-        /*
-        public IActionResult Browse2 (string category) //returns a view; best practice to not accept string parameter
+        // GET: Categories/Create
+        public IActionResult Create() //loads create form
         {
-            ViewBag.Category = category;
             return View();
         }
-        */
-        
-        
+
+        // POST: Categories/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Icon")] Category category) //processes forms, adds to database
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(category);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(category);
+        }
+
+        // GET: Categories/Edit/5
+        public async Task<IActionResult> Edit(int? id) //produces form with all preloaded values for editting
+        {
+            if (id == null || _context.Categories == null)
+            {
+                return NotFound();
+            }
+
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
+
+        // POST: Categories/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Icon")] Category category) //updates database
+        {
+            if (id != category.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(category);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CategoryExists(category.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(category);
+        }
+
+        // GET: Categories/Delete/5
+        public async Task<IActionResult> Delete(int? id) //processing script for deleting database entries
+        {
+            if (id == null || _context.Categories == null)
+            {
+                return NotFound();
+            }
+
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            return View(category);
+        }
+
+        // POST: Categories/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (_context.Categories == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+            }
+            var category = await _context.Categories.FindAsync(id);
+            if (category != null)
+            {
+                _context.Categories.Remove(category);
+            }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool CategoryExists(int id)
+        {
+          return (_context.Categories?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
     }
 }
