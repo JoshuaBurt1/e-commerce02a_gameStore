@@ -1,4 +1,4 @@
-﻿namespace WorldDominion
+﻿namespace Mage
 {
     public class RouteConfig
     {

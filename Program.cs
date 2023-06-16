@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
 
-namespace WorldDominion
+namespace Mage
 {
     public class Program
     {
