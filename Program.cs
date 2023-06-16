@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using WorldDominion.Data;
+using Mage.Data;
 
 namespace WorldDominion
 {

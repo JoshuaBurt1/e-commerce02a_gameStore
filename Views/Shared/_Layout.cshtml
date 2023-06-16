@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - World Dominion Grocers</title>
+    <title>@ViewData["Title"] - Major Gamer</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WorldDominion.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Mage.styles.css" asp-append-version="true" /> <!-- TODO: WHERE IS THIS?-->
+
 </head>
 <body>
     <header>
-        @Html.Partial("_Navigation")
+        @await Component.InvokeAsync("NavigationMenu") <!--Instantiate NavigationMenuViewComponent -> returns Default.cshtml -> renders in _Layout.cshtml -->
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -20,7 +21,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - World Dominion Grocers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Major Gamer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
