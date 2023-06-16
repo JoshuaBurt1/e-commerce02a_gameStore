@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K+sHdWcJ1DeVq0WxjSQakfk26LoZZzPyzDDzl3DwWfuf1hNo+JGiQrnfSktxO8wXjUUrJ0Fu6DqV1fHqqcnhfQ==",
+  "dgSpecHash": "BGp+gsf6D9CdDh7+veOKPbVyGLaU2rkIore2x1J4X02bEyRQ2r0EFC9MGCP0E1ZAC2PNskrJh1XLO42QS70Oqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\Mage.csproj",
+  "projectFilePath": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\Mage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
