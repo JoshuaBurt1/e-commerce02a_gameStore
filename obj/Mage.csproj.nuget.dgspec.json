@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\WorldDominion.csproj": {}
+    "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\Mage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\WorldDominion.csproj": {
+    "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\Mage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\WorldDominion.csproj",
-        "projectName": "WorldDominion",
-        "projectPath": "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\WorldDominion.csproj",
+        "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\Mage.csproj",
+        "projectName": "Mage",
+        "projectPath": "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\Mage.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Josh\\source\\repos\\COMP2084-Assignment2\\obj\\",
         "projectStyle": "PackageReference",
@@ -58,11 +58,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [
