@@ -22,8 +22,9 @@ namespace Mage.Controllers
         // GET: Categories
         public async Task<IActionResult> Index() //index page/view
         {
+            //SQL: Categories = TABLE, ORDER BY column category
               return _context.Categories != null ? 
-                          View(await _context.Categories.ToListAsync()) :
+                          View(await _context.Categories.OrderBy(category => category.Name).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
 

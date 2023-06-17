@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\wwwroot\\images\\games\\178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png",
+      "PackagePath": "staticwebassets\\images\\games\\178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\wwwroot\\images\\games\\cfafe767-9dc2-488d-8207-2afa3c1d21b6-hiraganaA.png",
+      "PackagePath": "staticwebassets\\images\\games\\cfafe767-9dc2-488d-8207-2afa3c1d21b6-hiraganaA.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\wwwroot\\images\\games\\f56a5317-7150-40cf-a6d0-6184c4013d30-aceSpades.png",
+      "PackagePath": "staticwebassets\\images\\games\\f56a5317-7150-40cf-a6d0-6184c4013d30-aceSpades.png"
+    },
+    {
       "Id": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -22,7 +22,8 @@ namespace Mage.Controllers
         // GET: Games
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Games.Include(g => g.Category);
+            //SQL: Games = TABLE; include = JOIN; ORDER BY game name alphabetically
+            var applicationDbContext = _context.Games.Include(g => g.Category).OrderBy(g => g.Name);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -58,10 +59,11 @@ namespace Mage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CategoryId,Name,Description,Genre,Price,Size,SizeUnit,Photo")] Game game)
+        public async Task<IActionResult> Create([Bind("Id,CategoryId,Name,Description,Genre,Price,Size,SizeUnit")] Game game, IFormFile? Photo)
         {
             if (ModelState.IsValid)
             {
+                game.Photo = await UploadPhoto(Photo); 
                 _context.Add(game);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -69,6 +71,24 @@ namespace Mage.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
             ViewData["GameSizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit))); //needed to get GameSizeUnit value
             return View(game);
+        }
+
+        private async Task<string> UploadPhoto(IFormFile photo)
+        {
+            if (photo != null)
+            {
+                //get temp location
+                var filePath = Path.GetTempFileName();
+                // create unique name so we don't overwrite an existing photo
+                var fileName = Guid.NewGuid() + "-" + photo.FileName;
+                //set the destination dynamically
+                var uploadPath = System.IO.Directory.GetCurrentDirectory() + "\\wwwroot\\images\\games\\" + fileName;
+                //Execute the file copy
+                using var stream = new FileStream(uploadPath, FileMode.Create);
+                await photo.CopyToAsync(stream);
+                return fileName;
+            }
+            return null;
         }
 
         // GET: Games/Edit/5

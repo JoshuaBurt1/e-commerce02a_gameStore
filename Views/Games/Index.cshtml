@@ -62,7 +62,10 @@
                 @Html.DisplayFor(modelItem => item.SizeUnit)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Photo)
+                @{
+                    var photoPath = "/images/games/"+ item.Photo;
+                }
+                <img class="img-fluid img-thumbnail" src="@photoPath">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category.Name)
