@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
+using MajorGamer.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Mage
 {
@@ -16,9 +17,20 @@ namespace Mage
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddRoles<IdentityRole>() //Enables Admin & User roles which are not on by default
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+            //package required: microsoft.aspnetcore.authentication.google
+            builder.Services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    //Access Google Auth section of appsettings.Development.json (our environment variables)
+                    IConfigurationSection googleAuth = builder.Configuration.GetSection("Authentication:Google");
+                    //Read Google API key values from config
+                    options.ClientId = googleAuth["ClientId"];
+                    options.ClientSecret = googleAuth["ClientSecret"];  
+                });
 
             var app = builder.Build();
 
