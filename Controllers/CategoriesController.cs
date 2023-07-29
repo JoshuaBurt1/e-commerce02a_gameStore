@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
 using Mage.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Mage.Controllers
 {
+    //Only administrator is allowed to access page
+    [Authorize(Roles = "Administrator")]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -27,7 +25,7 @@ namespace Mage.Controllers
                           View(await _context.Categories.OrderBy(category => category.Name).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
-
+     
         // GET: Categories/Details/5
         public async Task<IActionResult> Details(int? id) //show page for category
         {

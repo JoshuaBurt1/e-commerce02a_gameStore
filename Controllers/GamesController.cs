@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
 using Mage.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Mage.Controllers
 {
+    //Only administrator is allowed to access page
+    [Authorize(Roles = "Administrator")]
     public class GamesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -49,6 +48,12 @@ namespace Mage.Controllers
         // GET: Games/Create
         public IActionResult Create()
         {
+            //if no categories, user cannot create a product
+            if(!_context.Categories.Any())
+            {
+                ModelState.AddModelError("", "No categories exist. Please create a category first.");
+                return RedirectToAction("Index", "Departments");
+            }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             ViewData["GameSizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit))); //needed to get GameSizeUnit value
             return View();
