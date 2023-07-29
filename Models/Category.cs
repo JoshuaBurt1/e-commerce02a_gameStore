@@ -6,7 +6,7 @@ namespace Mage.Models
     {
         public int Id { get; set; } //primary key
 
-        [Required(ErrorMessage = "You must provide a category name."), MaxLength(200)]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "You must provide a category name."), MaxLength(200)]
         [Display(Name = "Category Name")]
         public string Name { get; set; }
 
