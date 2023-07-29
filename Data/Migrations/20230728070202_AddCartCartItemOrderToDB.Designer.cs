@@ -4,6 +4,7 @@ using Mage.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,13 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mage.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230728070202_AddCartCartItemOrderToDB")]
+    partial class AddCartCartItemOrderToDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.20")
+                .HasAnnotation("ProductVersion", "6.0.16")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -94,13 +96,15 @@ namespace Mage.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Carts");
                 });
@@ -148,9 +152,6 @@ namespace Mage.Data.Migrations
                     b.Property<int>("CartId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CartId1")
-                        .HasColumnType("int");
-
                     b.Property<int>("PaymentMethod")
                         .HasColumnType("int");
 
@@ -164,19 +165,17 @@ namespace Mage.Data.Migrations
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CartId");
 
-                    b.HasIndex("CartId1")
-                        .IsUnique()
-                        .HasFilter("[CartId1] IS NOT NULL");
-
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Orders");
                 });
@@ -398,9 +397,7 @@ namespace Mage.Data.Migrations
                 {
                     b.HasOne("MajorGamer.Models.User", "User")
                         .WithMany("Cart")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("User");
                 });
@@ -410,7 +407,7 @@ namespace Mage.Data.Migrations
                     b.HasOne("MajorGamer.Models.Cart", "Cart")
                         .WithMany("CartItems")
                         .HasForeignKey("CartId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Mage.Models.Game", "Game")
@@ -427,18 +424,12 @@ namespace Mage.Data.Migrations
                     b.HasOne("MajorGamer.Models.Cart", "Cart")
                         .WithMany()
                         .HasForeignKey("CartId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("MajorGamer.Models.Cart", null)
-                        .WithOne("Order")
-                        .HasForeignKey("MajorGamer.Models.Order", "CartId1");
 
                     b.HasOne("MajorGamer.Models.User", "User")
                         .WithMany("Order")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Cart");
 
@@ -504,8 +495,6 @@ namespace Mage.Data.Migrations
             modelBuilder.Entity("MajorGamer.Models.Cart", b =>
                 {
                     b.Navigation("CartItems");
-
-                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("MajorGamer.Models.User", b =>
