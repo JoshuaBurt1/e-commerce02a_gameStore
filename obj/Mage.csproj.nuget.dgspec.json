@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\Mage.csproj": {}
+    "C:\\Users\\Josh\\Desktop\\WebDev\\ASP.NET\\Assignments\\Assignment2\\COMP2084-Assignment-main\\Mage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\Mage.csproj": {
+    "C:\\Users\\Josh\\Desktop\\WebDev\\ASP.NET\\Assignments\\Assignment2\\COMP2084-Assignment-main\\Mage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\Mage.csproj",
+        "projectUniqueName": "C:\\Users\\Josh\\Desktop\\WebDev\\ASP.NET\\Assignments\\Assignment2\\COMP2084-Assignment-main\\Mage.csproj",
         "projectName": "Mage",
-        "projectPath": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\Mage.csproj",
+        "projectPath": "C:\\Users\\Josh\\Desktop\\WebDev\\ASP.NET\\Assignments\\Assignment2\\COMP2084-Assignment-main\\Mage.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment\\obj\\",
+        "outputPath": "C:\\Users\\Josh\\Desktop\\WebDev\\ASP.NET\\Assignments\\Assignment2\\COMP2084-Assignment-main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,31 +44,35 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.15, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.20, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.20, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.16, )"
+              "version": "[6.0.20, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.16, )"
+              "version": "[6.0.20, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
