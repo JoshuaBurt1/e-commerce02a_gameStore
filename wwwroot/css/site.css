@@ -1,16 +1,19 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    background-image: url("/images/siteImages/matrix.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -19,4 +22,13 @@ body {
 
 .img-thumbnail{
     max-width: 100px;
+}
+
+/*body and div will not change border color*/
+
+.home {
+    text-align: center;
+}
+.zero{
+    font-weight:bold;
 }
