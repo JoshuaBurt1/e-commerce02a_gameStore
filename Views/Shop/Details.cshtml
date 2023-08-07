@@ -66,15 +66,16 @@
                     @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
-                    <form asp-action="AddToCart">
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <input type="hidden" name="gameId" value="@item.Id" />
-                            <input type="hidden" name="quantity" value="1" />
-                            <input type="submit" value="AddToCart" class="btn btn-primary" />
-                        }
-                        <a asp-action="GameDetails" asp-route-id="@item.Id">View Game</a>
-                    </form>
+                @if (User.Identity.IsAuthenticated)
+                    {
+                        <form class="d-inline" asp-action="AddToCart">
+                        <input type="hidden" name="gameId" value="@item.Id" />
+                        <input type="hidden" name="quantity" value="1" />
+                        <input type="submit" value="Quick Add" class="btn btn-primary" />
+                        </form>
+                    }
+                <a class="btn btn-secondary" asp-action="GameDetails" asp-route-id="@item.Id">View Game</a>
+
                 </td>
             </tr>
         }
