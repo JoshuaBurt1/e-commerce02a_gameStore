@@ -27,7 +27,7 @@ namespace Mage.Models
         public string? Genre { get; set; }
 
         [Required(), Range(0.01, 999.99)]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         [Required(), Range(0.01, 999.99)]
         public decimal Size { get; set; } //file size in GB
