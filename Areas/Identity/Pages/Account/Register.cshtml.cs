@@ -6,14 +6,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Authentication;
-using MajorGamer.Models;
+using Mage.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace MajorGamer.Areas.Identity.Pages.Account
+namespace Mage.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
@@ -115,9 +115,8 @@ namespace MajorGamer.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-                    
-                    //create association for User role
-                    //Assigns default role to new Users
+
+                    //Assigns default role to new user
                     await _userManager.AddToRoleAsync(user, "Customer");
 
                     var userId = await _userManager.GetUserIdAsync(user);
