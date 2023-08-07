@@ -31,7 +31,19 @@ namespace Mage
                 options.ClientSecret = googleAuth["ClientSecret"];
             });
 
+            //Sessions
+            //Adding a new dependency so controllers can read configuration values
+            builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+            //Add sessions to our application
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             var app = builder.Build();
+            //Use out session
+            app.UseSession();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
