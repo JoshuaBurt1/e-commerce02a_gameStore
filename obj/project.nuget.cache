@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VylyfoUY8KoEAGnHfVT2Su0xktZyabYdNmMMIO6eyh4/J/jrYESid2d+LhxmejSk3bVw94MqR7RBIlYLiGFzRQ==",
+  "dgSpecHash": "j/LXJKjPfpK0BrKqZfRkaueBJY3E6xrsXCKN8R8WGUqiwoaRACaDEQBsuLfRML/Two6ywMstOGGSs00TnunQqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\Mage.csproj",
+  "projectFilePath": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment-main1\\Mage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josh\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -149,6 +149,7 @@
     "C:\\Users\\Josh\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Josh\\.nuget\\packages\\stripe.net\\41.27.0\\stripe.net.41.27.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

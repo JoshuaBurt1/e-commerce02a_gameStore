@@ -7,175 +7,195 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = MajorGamer
-build_property.RootNamespace = MajorGamer
-build_property.ProjectDir = C:\Users\Josh\Source\Repos\JoshuaBurt1\COMP2084-Assignment\
+build_property.RootNamespace = Mage
+build_property.RootNamespace = Mage
+build_property.ProjectDir = C:\Users\Josh\Source\Repos\COMP2084-Assignment-main1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Josh\Source\Repos\JoshuaBurt1\COMP2084-Assignment
+build_property.MSBuildProjectDirectory = C:\Users\Josh\Source\Repos\COMP2084-Assignment-main1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Carts/Create.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Carts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Carts/Delete.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Carts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Carts/Details.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Carts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Carts/Edit.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Carts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Carts/Index.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Carts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Categories/Browse.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Categories/Browse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xCcm93c2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Categories/Create.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Categories/Delete.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Categories/Details.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Categories/Edit.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Categories/Index.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Games/Create.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Games/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Games/Delete.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Games/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Games/Details.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Games/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Games/Edit.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Games/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Games/Index.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Games/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Home/About.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Home/Contact.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Home/Index.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Home/Privacy.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Orders/Create.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Orders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Orders/Delete.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Orders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Orders/Details.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Orders/Edit.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Orders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Orders/Index.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shared/Components/NavigationMenu/Default.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/Components/NavigationMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2aWdhdGlvbk1lbnVcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shared/Error.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/_GameImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HYW1lSW1hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shared/_Navigation.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/_Navigation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZpZ2F0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shop/Details.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shop/GameDetails.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/GameDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxHYW1lRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shop/Index.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/_ViewImports.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/OrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxPcmRlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shop/ViewMyCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxWaWV3TXlDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/_ViewStart.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Josh/Source/Repos/JoshuaBurt1/COMP2084-Assignment/Views/Shared/_Layout.cshtml]
+[C:/Users/Josh/Source/Repos/COMP2084-Assignment-main1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-i25o4pacm7

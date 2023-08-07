@@ -2426,6 +2426,23 @@
           }
         }
       },
+      "Stripe.net/41.27.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7407,6 +7424,29 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "Stripe.net/41.27.0": {
+      "sha512": "CYHqBngR7OYV4H7ftCmtqH1VBU4qW2k7h1cN7jAelCNp+IV1QbBVuEIiVIjHBN6/pNTOJVDtmJw+R92hdndvgA==",
+      "type": "package",
+      "path": "stripe.net/41.27.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.xml",
+        "lib/net5.0/Stripe.net.dll",
+        "lib/net5.0/Stripe.net.xml",
+        "lib/net6.0/Stripe.net.dll",
+        "lib/net6.0/Stripe.net.xml",
+        "lib/netcoreapp3.1/Stripe.net.dll",
+        "lib/netcoreapp3.1/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.41.27.0.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
     "System.AppContext/4.3.0": {
       "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
       "type": "package",
@@ -11216,7 +11256,8 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.20",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.20",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.20",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15",
+      "Stripe.net >= 41.27.0"
     ]
   },
   "packageFolders": {
@@ -11226,11 +11267,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\Mage.csproj",
+      "projectUniqueName": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment-main1\\Mage.csproj",
       "projectName": "Mage",
-      "projectPath": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\Mage.csproj",
+      "projectPath": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment-main1\\Mage.csproj",
       "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\obj\\",
+      "outputPath": "C:\\Users\\Josh\\Source\\Repos\\COMP2084-Assignment-main1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11292,6 +11333,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.15, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[41.27.0, )"
           }
         },
         "imports": [
