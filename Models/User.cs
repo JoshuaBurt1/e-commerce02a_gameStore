@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace MajorGamer.Models
+namespace Mage.Models
 {
     //inherit from Identity User
     public class User : IdentityUser

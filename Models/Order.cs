@@ -1,4 +1,4 @@
-﻿namespace MajorGamer.Models
+﻿namespace Mage.Models
 {
     public enum PaymentMethods
     {

@@ -1,7 +1,4 @@
-﻿using Mage.Models;
-using System.Net.Http.Headers;
-
-namespace MajorGamer.Models
+﻿namespace Mage.Models
 {
     public class CartItem
     {
