@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NIV6GrgqcRDT0SnRHF0FbFZSrbZMvoqhflItCgHATVT1aGWxCbACxSoMismmGsPFlseP4JQtuEWS+J1QAwWyng==",
+  "dgSpecHash": "VylyfoUY8KoEAGnHfVT2Su0xktZyabYdNmMMIO6eyh4/J/jrYESid2d+LhxmejSk3bVw94MqR7RBIlYLiGFzRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josh\\Desktop\\WebDev\\ASP.NET\\Assignments\\Assignment2\\COMP2084-Assignment-main\\Mage.csproj",
+  "projectFilePath": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\Mage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josh\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
