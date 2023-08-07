@@ -2,7 +2,7 @@
 {
     public class RouteConfig
     {
-        public static void ConfigureRoutes(IEndpointRouteBuilder routes) 
+        public static void ConfigureRoutes(IEndpointRouteBuilder routes)
         {
 
             routes.MapControllerRoute(
@@ -16,7 +16,7 @@
                 pattern: "contact",
                 defaults: new { controller = "Home", action = "Contact" });
 
-            routes.MapControllerRoute( //WITHOUT THIS ROUTE: https://localhost:7150/Home/Privacy ;//WITH THIS ROUTE: https://localhost:7150/privacy
+            routes.MapControllerRoute( //WITHOUT THIS ROUTE: https://localhost:7261/Home/Privacy ;//WITH THIS ROUTE: https://localhost:7261/privacy
                 name: "privacy",
                 pattern: "privacy",
                 defaults: new { controller = "Home", action = "Privacy" } //route override

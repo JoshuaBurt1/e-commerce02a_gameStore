@@ -4,8 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-Mage-dfe39cb1-c939-4db5-835e-a4bc23400a39</UserSecretsId>
-	  <RootNamespace>MajorGamer</RootNamespace>
+    <UserSecretsId>aspnet-Mage-92a30c38-964e-4e39-915c-49e7bdffb5a7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

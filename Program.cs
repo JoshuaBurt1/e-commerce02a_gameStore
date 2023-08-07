@@ -1,13 +1,13 @@
-using Microsoft.EntityFrameworkCore;
 using Mage.Data;
-using MajorGamer.Models;
+using Mage.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mage
 {
     public class Program
     {
-        public static void Main(string[] args) //Entire application starts from this file
+        public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -18,24 +18,23 @@ namespace Mage
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddRoles<IdentityRole>() //Enables Admin & User roles which are not on by default
+                .AddRoles<IdentityRole>() //Enables roles
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
-            //package required: microsoft.aspnetcore.authentication.google
-            builder.Services.AddAuthentication()
-                .AddGoogle(options =>
-                {
-                    //Access Google Auth section of appsettings.Development.json (our environment variables)
-                    IConfigurationSection googleAuth = builder.Configuration.GetSection("Authentication:Google");
-                    //Read Google API key values from config
-                    options.ClientId = googleAuth["ClientId"];
-                    options.ClientSecret = googleAuth["ClientSecret"];  
-                });
+
+            builder.Services.AddAuthentication().AddGoogle(options =>
+            {
+                //Access Google Auth from appsettings.json
+                IConfigurationSection googleAuth = builder.Configuration.GetSection("Authentication:Google");
+                //Read Google API key values
+                options.ClientId = googleAuth["ClientId"];
+                options.ClientSecret = googleAuth["ClientSecret"];
+            });
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment()) //app.= registering a middleware/factory pattern (taking a request)-> resolve or to next middleware
+            if (app.Environment.IsDevelopment())
             {
                 app.UseMigrationsEndPoint();
             }
@@ -46,16 +45,16 @@ namespace Mage
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection(); //loads 
-            app.UseStaticFiles(); //registers request
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
-            app.UseRouting(); //where all routing happens
+            app.UseRouting();
 
-            app.UseAuthentication(); 
+            app.UseAuthentication();
             app.UseAuthorization();
 
-            RouteConfig.ConfigureRoutes(app); //routes are read in order, 
-
+            RouteConfig.ConfigureRoutes(app);
+            
             app.MapRazorPages();
 
             app.Run();
