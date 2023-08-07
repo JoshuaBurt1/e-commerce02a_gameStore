@@ -38,44 +38,45 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Games) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SizeUnit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.Name)
-            </td>
-            <td>
-                <form asp-action="AddToCart">
+        @foreach (var item in Model.Games)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SizeUnit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Photo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    <form asp-action="AddToCart">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <input type="hidden" name="gameId" value="@item.Id"/>
-                            <input type="hidden" name="quantity" value="1"/>
-                            <input type="submit" value="AddToCart" class="btn btn-primary"/>
+                            <input type="hidden" name="gameId" value="@item.Id" />
+                            <input type="hidden" name="quantity" value="1" />
+                            <input type="submit" value="AddToCart" class="btn btn-primary" />
                         }
                         <a asp-action="GameDetails" asp-route-id="@item.Id">View Game</a>
                     </form>
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

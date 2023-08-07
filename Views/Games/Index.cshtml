@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Mage.Models.Game>
 
 @{
-    ViewData["Title"] = "Games";
+    ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -62,10 +62,7 @@
                 @Html.DisplayFor(modelItem => item.SizeUnit)
             </td>
             <td>
-                @{
-                    var photoPath = "/images/games/"+ item.Photo;
-                }
-                <img class="img-fluid img-thumbnail" src="@photoPath">
+                <partial name="_GameImage" model="item" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category.Name)

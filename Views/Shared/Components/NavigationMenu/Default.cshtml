@@ -1,20 +1,16 @@
 ﻿@model List<MenuItem>
-
-<ul class="navbar-brand flex-grow-1">
+<ul>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Mage</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                <!--at symbol means C# -->
-                <!--iterates through NavigationMenuViewComponent.cs List<MenuItem>-->
-                @foreach (var menuItem in Model) //to iterate through MenuItems List at top of page (navigation bar)
-                {
-                    //hides MenuItem if not authenticated
+                    @foreach (var menuItem in Model)
+                    {
                         if (menuItem.Authorized.GetValueOrDefault() && !User.Identity.IsAuthenticated) continue;
 
                         if (User.Identity.IsAuthenticated && menuItem.AllowedRoles != null && menuItem.AllowedRoles.Count > 0)
@@ -22,41 +18,37 @@
                             if (menuItem.AllowedRoles.Find(role => User.IsInRole(role)) == null) continue;
                         }
 
-                        if(menuItem.DropdownItems != null) //if any DropdownItems, render in navbar
+                        if (menuItem.DropdownItems != null && menuItem.DropdownItems.Any())
                         {
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                                @menuItem.Label
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                @foreach (var dropdownItem in menuItem.DropdownItems)
-                                {
-                                    if (menuItem.Authorized.GetValueOrDefault() && !User.Identity.IsAuthenticated) 
-                                        continue;
-                                    if (User.Identity.IsAuthenticated && menuItem.AllowedRoles != null && menuItem.AllowedRoles.Count > 0)
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @menuItem.Label
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @foreach (var dropdownItem in menuItem.DropdownItems)
                                     {
-                                        if (menuItem.AllowedRoles.Find(role => User.IsInRole(role)) == null) 
-                                            continue;
+                                        if (menuItem.Authorized.GetValueOrDefault() && !User.Identity.IsAuthenticated) continue;
+                                        if (User.Identity.IsAuthenticated && menuItem.AllowedRoles != null && menuItem.AllowedRoles.Count > 0)
+                                        {
+                                            if (menuItem.AllowedRoles.Find(role => User.IsInRole(role)) == null) continue;
+                                        }
+                                        <li><a class="dropdown-item" asp-controller="@dropdownItem.Controller" asp-action="@dropdownItem.Action">@dropdownItem.Label</a></li>
                                     }
-                                    
-                                    <li>
-                                        <a class="dropdown-item" asp-controller="@dropdownItem.Controller" asp-action="@dropdownItem.Action">@dropdownItem.Label</a>
-                                    </li>
-                                }
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>
                         }
-                    else //renders anything else in navbar
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="@menuItem.Controller" asp-action="@menuItem.Action">@menuItem.Label</a>
-                        </li>  
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="@menuItem.Controller" asp-action="@menuItem.Action">@menuItem.Label</a>
+                            </li>
+                        }
                     }
-                }
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
         </div>
     </nav>
 </ul>
+
+

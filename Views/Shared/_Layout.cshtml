@@ -3,15 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Major Gamer</title>
+    <title>@ViewData["Title"] - Mage</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Mage.styles.css" asp-append-version="true" /> <!-- TODO: WHERE IS THIS?-->
-
+    <link rel="stylesheet" href="~/Mage.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        @await Component.InvokeAsync("NavigationMenu") <!--Instantiate NavigationMenuViewComponent -> returns Default.cshtml -> renders in _Layout.cshtml -->
+        @await Component.InvokeAsync("NavigationMenu")
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -19,20 +18,21 @@
         </main>
     </div>
 </body>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <div class="footerFormat1">
-                &copy; 2023 - Major Gamer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        <div class="footerFormat1">
+            &copy; 2023 - Major Gamer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-        <div class="container">
-            <div class="footerFormat2">
-                <p>Joshua Burt; 200523537; 23S Server-Side Scripting-ASP.NET - 05 COMP2084-23S-30965</p>
-            </div>
+    </div>
+    <div class="container">
+        <div class="footerFormat2">
+            <p>Joshua Burt; 200523537; 23S Server-Side Scripting-ASP.NET - 05 COMP2084-23S-30965</p>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 </html>

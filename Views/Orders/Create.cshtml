@@ -1,4 +1,4 @@
-﻿@model MajorGamer.Models.Order
+﻿@model Mage.Models.Order
 
 @{
     ViewData["Title"] = "Create";
@@ -15,8 +15,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="CartId" class="control-label"></label>
