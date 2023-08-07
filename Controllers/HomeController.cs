@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Mage.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Mage.Models;
 
 namespace Mage.Controllers
 {
@@ -17,10 +17,12 @@ namespace Mage.Controllers
         {
             return View();
         }
-        public IActionResult About() //IActionResult --> return datatype; //About = name; //{ } = block, contains logic
+
+        public IActionResult About()
         {
             return View();
         }
+
         public IActionResult Contact()
         {
             return View();

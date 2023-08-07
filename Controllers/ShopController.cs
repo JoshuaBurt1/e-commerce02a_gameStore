@@ -13,7 +13,8 @@ namespace MajorGamer.Controllers
         public ShopController(ApplicationDbContext context)
         {
             _context = context;
-        }        
+        }
+
         public async Task<IActionResult> Index()
         {
             var categories = await _context.Categories.OrderBy(category => category.Name).ToListAsync();
@@ -21,7 +22,7 @@ namespace MajorGamer.Controllers
         }
         public async Task<IActionResult> Details(int? id)
         {
-            var categoryWithGames= await _context.Categories.Include(category => category.Games).FirstOrDefaultAsync(category => category.Id == id);
+            var categoryWithGames = await _context.Categories.Include(category => category.Games).FirstOrDefaultAsync(category => category.Id == id);
             return View(categoryWithGames);
         }
         public async Task<IActionResult> GameDetails(int? id)

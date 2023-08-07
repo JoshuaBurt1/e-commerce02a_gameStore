@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
-using MajorGamer.Models;
+using Mage.Models;
 
-namespace MajorGamer.Controllers
+namespace Mage.Controllers
 {
     public class OrdersController : Controller
     {
@@ -22,7 +22,7 @@ namespace MajorGamer.Controllers
         // GET: Orders
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Orders.Include(o => o.Cart);
+            var applicationDbContext = _context.Orders.Include(o => o.Cart).Include(o => o.User);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -36,6 +36,7 @@ namespace MajorGamer.Controllers
 
             var order = await _context.Orders
                 .Include(o => o.Cart)
+                .Include(o => o.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (order == null)
             {
@@ -49,6 +50,7 @@ namespace MajorGamer.Controllers
         public IActionResult Create()
         {
             ViewData["CartId"] = new SelectList(_context.Carts, "Id", "Id");
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -66,6 +68,7 @@ namespace MajorGamer.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CartId"] = new SelectList(_context.Carts, "Id", "Id", order.CartId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", order.UserId);
             return View(order);
         }
 
@@ -83,6 +86,7 @@ namespace MajorGamer.Controllers
                 return NotFound();
             }
             ViewData["CartId"] = new SelectList(_context.Carts, "Id", "Id", order.CartId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", order.UserId);
             return View(order);
         }
 
@@ -119,6 +123,7 @@ namespace MajorGamer.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CartId"] = new SelectList(_context.Carts, "Id", "Id", order.CartId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", order.UserId);
             return View(order);
         }
 
@@ -132,6 +137,7 @@ namespace MajorGamer.Controllers
 
             var order = await _context.Orders
                 .Include(o => o.Cart)
+                .Include(o => o.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (order == null)
             {

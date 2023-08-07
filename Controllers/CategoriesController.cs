@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
 using Mage.Models;
@@ -6,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Mage.Controllers
 {
-    //Only administrator is allowed to access page
     [Authorize(Roles = "Administrator")]
     public class CategoriesController : Controller
     {
@@ -18,16 +22,15 @@ namespace Mage.Controllers
         }
 
         // GET: Categories
-        public async Task<IActionResult> Index() //index page/view
+        public async Task<IActionResult> Index()
         {
-            //SQL: Categories = TABLE, ORDER BY column category
               return _context.Categories != null ? 
-                          View(await _context.Categories.OrderBy(category => category.Name).ToListAsync()) :
+                          View(await _context.Categories.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
-     
+
         // GET: Categories/Details/5
-        public async Task<IActionResult> Details(int? id) //show page for category
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Categories == null)
             {
@@ -45,7 +48,7 @@ namespace Mage.Controllers
         }
 
         // GET: Categories/Create
-        public IActionResult Create() //loads create form
+        public IActionResult Create()
         {
             return View();
         }
@@ -55,7 +58,7 @@ namespace Mage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Icon")] Category category) //processes forms, adds to database
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Icon")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +70,7 @@ namespace Mage.Controllers
         }
 
         // GET: Categories/Edit/5
-        public async Task<IActionResult> Edit(int? id) //produces form with all preloaded values for editting
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Categories == null)
             {
@@ -87,7 +90,7 @@ namespace Mage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Icon")] Category category) //updates database
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Icon")] Category category)
         {
             if (id != category.Id)
             {
@@ -118,7 +121,7 @@ namespace Mage.Controllers
         }
 
         // GET: Categories/Delete/5
-        public async Task<IActionResult> Delete(int? id) //processing script for deleting database entries
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Categories == null)
             {

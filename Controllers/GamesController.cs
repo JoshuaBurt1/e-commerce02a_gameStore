@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
@@ -7,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Mage.Controllers
 {
-    //Only administrator is allowed to access page
     [Authorize(Roles = "Administrator")]
     public class GamesController : Controller
     {
@@ -21,7 +24,6 @@ namespace Mage.Controllers
         // GET: Games
         public async Task<IActionResult> Index()
         {
-            //SQL: Games = TABLE; include = JOIN; ORDER BY game name alphabetically
             var applicationDbContext = _context.Games.Include(g => g.Category).OrderBy(g => g.Name);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -48,14 +50,8 @@ namespace Mage.Controllers
         // GET: Games/Create
         public IActionResult Create()
         {
-            //if no categories, user cannot create a product
-            if(!_context.Categories.Any())
-            {
-                ModelState.AddModelError("", "No categories exist. Please create a category first.");
-                return RedirectToAction("Index", "Departments");
-            }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
-            ViewData["GameSizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit))); //needed to get GameSizeUnit value
+            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
             return View();
         }
 
@@ -68,32 +64,14 @@ namespace Mage.Controllers
         {
             if (ModelState.IsValid)
             {
-                game.Photo = await UploadPhoto(Photo); 
+                game.Photo = await UploadPhoto(Photo);
                 _context.Add(game);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
-            ViewData["GameSizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit))); //needed to get GameSizeUnit value
+            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
             return View(game);
-        }
-
-        private async Task<string> UploadPhoto(IFormFile photo)
-        {
-            if (photo != null)
-            {
-                //get temp location
-                var filePath = Path.GetTempFileName();
-                // create unique name so we don't overwrite an existing photo
-                var fileName = Guid.NewGuid() + "-" + photo.FileName;
-                //set the destination dynamically
-                var uploadPath = System.IO.Directory.GetCurrentDirectory() + "\\wwwroot\\images\\games\\" + fileName;
-                //Execute the file copy
-                using var stream = new FileStream(uploadPath, FileMode.Create);
-                await photo.CopyToAsync(stream);
-                return fileName;
-            }
-            return null;
         }
 
         // GET: Games/Edit/5
@@ -110,7 +88,7 @@ namespace Mage.Controllers
                 return NotFound();
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
-            ViewData["GameSizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit))); //needed to get GameSizeUnit value
+            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
             return View(game);
         }
 
@@ -147,7 +125,7 @@ namespace Mage.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
-            ViewData["GameSizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit))); //needed to get GameSizeUnit value
+            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
             return View(game);
         }
 
@@ -192,6 +170,23 @@ namespace Mage.Controllers
         private bool GameExists(int id)
         {
           return (_context.Games?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+        private async Task<string?> UploadPhoto(IFormFile photo)
+        {
+            if (photo != null)
+            {
+                //get temp location
+                var filePath =Path.GetTempFileName();
+                //create unique name
+                var fileName = Guid.NewGuid() + "-" + photo.FileName;
+                //Set the desitination dynamically
+                var uploadPath = System.IO.Directory.GetCurrentDirectory() + "\\wwwroot\\images\\games\\" + fileName;
+                //Execute the file copy
+                using var stream = new FileStream(uploadPath, FileMode.Create);
+                await photo.CopyToAsync(stream);
+                return fileName;
+            }
+            return null;
         }
     }
 }

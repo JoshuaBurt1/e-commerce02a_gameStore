@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mage.Data;
-using MajorGamer.Models;
+using Mage.Models;
 
-namespace MajorGamer.Controllers
+namespace Mage.Controllers
 {
     public class CartsController : Controller
     {
@@ -22,9 +22,8 @@ namespace MajorGamer.Controllers
         // GET: Carts
         public async Task<IActionResult> Index()
         {
-              return _context.Carts != null ? 
-                          View(await _context.Carts.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Carts'  is null.");
+            var applicationDbContext = _context.Carts.Include(c => c.User);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Carts/Details/5
@@ -36,6 +35,7 @@ namespace MajorGamer.Controllers
             }
 
             var cart = await _context.Carts
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (cart == null)
             {
@@ -48,6 +48,7 @@ namespace MajorGamer.Controllers
         // GET: Carts/Create
         public IActionResult Create()
         {
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -64,6 +65,7 @@ namespace MajorGamer.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", cart.UserId);
             return View(cart);
         }
 
@@ -80,6 +82,7 @@ namespace MajorGamer.Controllers
             {
                 return NotFound();
             }
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", cart.UserId);
             return View(cart);
         }
 
@@ -115,6 +118,7 @@ namespace MajorGamer.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", cart.UserId);
             return View(cart);
         }
 
@@ -127,6 +131,7 @@ namespace MajorGamer.Controllers
             }
 
             var cart = await _context.Carts
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (cart == null)
             {
