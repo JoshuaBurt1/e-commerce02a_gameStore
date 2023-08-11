@@ -26,10 +26,10 @@ namespace Mage.Models
 
         public string? Genre { get; set; }
 
-        [Required(), Range(0.01, 999.99)]
+        [Required()]
         public decimal Price { get; set; }
 
-        [Required(), Range(0.01, 999.99)]
+        [Required()]
         public decimal Size { get; set; } //file size in GB
 
         [Required()]

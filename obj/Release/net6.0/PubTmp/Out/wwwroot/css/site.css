@@ -1,0 +1,66 @@
+html {
+    font-size: 14px;
+    background-image: url("/images/siteImages/matrix.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.img-thumbnail {
+    max-width: 100px;
+}
+
+/*body and div will not change border color*/
+
+.home {
+    text-align: center;
+}
+
+.zero {
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: rgb(255, 255, 255,0.25);
+}
+
+.footerFormat1 {
+    font-weight: 500;
+    color: #86fc5d;
+    margin-left: -215px;
+    text-shadow: -1px -1px 0 black, /* Top-left border shadow */
+    1px -1px 0 black, /* Top-right border shadow */
+    -1px 1px 0 black, /* Bottom-left border shadow */
+    1px 1px 0 black; /* Bottom-right border shadow */
+}
+
+.footerFormat2 {
+    font-weight: 500;
+    color: #86fc5d;
+    margin-left: 115px;
+    text-shadow: -1px -1px 0 black, /* Top-left border shadow */
+    1px -1px 0 black, /* Top-right border shadow */
+    -1px 1px 0 black, /* Bottom-left border shadow */
+    1px 1px 0 black; /* Bottom-right border shadow */
+}

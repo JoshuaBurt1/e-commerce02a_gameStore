@@ -1,275 +1,319 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mage.bundle.scp.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mage.bundle.scp.css",
       "PackagePath": "staticwebassets\\Mage.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\games\\178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\117f7a5d-19ce-4220-a03e-13c03485ed79-7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png",
+      "PackagePath": "staticwebassets\\images\\games\\117f7a5d-19ce-4220-a03e-13c03485ed79-7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png",
       "PackagePath": "staticwebassets\\images\\games\\178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\games\\7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\1a2a6712-db86-45f3-b11f-8b2200bd95ce-placeholder.png",
+      "PackagePath": "staticwebassets\\images\\games\\1a2a6712-db86-45f3-b11f-8b2200bd95ce-placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\5e742231-dd7b-4934-9410-8236d4890238-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png",
+      "PackagePath": "staticwebassets\\images\\games\\5e742231-dd7b-4934-9410-8236d4890238-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\6995c41c-c7a6-4a0d-a066-db8e81b28608-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png",
+      "PackagePath": "staticwebassets\\images\\games\\6995c41c-c7a6-4a0d-a066-db8e81b28608-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\6d828d2c-ff86-4f39-86a8-7870cf9365c5-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png",
+      "PackagePath": "staticwebassets\\images\\games\\6d828d2c-ff86-4f39-86a8-7870cf9365c5-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png",
       "PackagePath": "staticwebassets\\images\\games\\7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\games\\8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png",
       "PackagePath": "staticwebassets\\images\\games\\8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\games\\99955acd-4a00-49b4-aa21-a67287773751-math.png",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\9176e4d4-a354-40a8-b888-04598683bcd8-117f7a5d-19ce-4220-a03e-13c03485ed79-7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png",
+      "PackagePath": "staticwebassets\\images\\games\\9176e4d4-a354-40a8-b888-04598683bcd8-117f7a5d-19ce-4220-a03e-13c03485ed79-7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\9475a9fd-f4ef-4a70-9d87-6f6467bb96a8-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png",
+      "PackagePath": "staticwebassets\\images\\games\\9475a9fd-f4ef-4a70-9d87-6f6467bb96a8-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\99955acd-4a00-49b4-aa21-a67287773751-math.png",
       "PackagePath": "staticwebassets\\images\\games\\99955acd-4a00-49b4-aa21-a67287773751-math.png"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\games\\cfafe767-9dc2-488d-8207-2afa3c1d21b6-hiraganaA.png",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\b7890aa1-eda7-47e2-aa44-71940701cba8-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png",
+      "PackagePath": "staticwebassets\\images\\games\\b7890aa1-eda7-47e2-aa44-71940701cba8-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\cfafe767-9dc2-488d-8207-2afa3c1d21b6-hiraganaA.png",
       "PackagePath": "staticwebassets\\images\\games\\cfafe767-9dc2-488d-8207-2afa3c1d21b6-hiraganaA.png"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\games\\f56a5317-7150-40cf-a6d0-6184c4013d30-aceSpades.png",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\d6f6a005-b4a1-409e-9f60-6744428294ce-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png",
+      "PackagePath": "staticwebassets\\images\\games\\d6f6a005-b4a1-409e-9f60-6744428294ce-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\f56a5317-7150-40cf-a6d0-6184c4013d30-aceSpades.png",
       "PackagePath": "staticwebassets\\images\\games\\f56a5317-7150-40cf-a6d0-6184c4013d30-aceSpades.png"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\images\\siteImages\\matrix.jpg",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\imitation.png",
+      "PackagePath": "staticwebassets\\images\\games\\imitation.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\games\\placeholder.png",
+      "PackagePath": "staticwebassets\\images\\games\\placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\images\\siteImages\\matrix.jpg",
       "PackagePath": "staticwebassets\\images\\siteImages\\matrix.jpg"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Josh\\Source\\Repos\\JoshuaBurt1\\COMP2084-Assignment\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Josh\\source\\repos\\Mage\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
