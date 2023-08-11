@@ -176,6 +176,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\games\9176e4d4-a354-40a8-b888-04598683bcd8-117f7a5d-19ce-4220-a03e-13c03485ed79-7fc2fff3-a83f-499c-ac04-94491d04f234-bingo.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\games\93b78f15-24e3-4afe-8648-8ff53e08f322-5e742231-dd7b-4934-9410-8236d4890238-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mage</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mage</BasePath>
+      <RelativePath>images/games/93b78f15-24e3-4afe-8648-8ff53e08f322-5e742231-dd7b-4934-9410-8236d4890238-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\games\93b78f15-24e3-4afe-8648-8ff53e08f322-5e742231-dd7b-4934-9410-8236d4890238-178e13c7-8de6-457e-b1bc-fbc39240b7aa-redcross.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\games\9475a9fd-f4ef-4a70-9d87-6f6467bb96a8-8259ca87-da53-4dff-bcb0-96ce29a0974a-math.png))">
       <SourceType>Package</SourceType>
       <SourceId>Mage</SourceId>
