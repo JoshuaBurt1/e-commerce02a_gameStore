@@ -10,7 +10,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
@@ -23,13 +23,13 @@
                 @Html.DisplayNameFor(model => model.Genre)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Link)
+            </th>
+            <th class="price">
                 @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Size)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SizeUnit)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Photo)
@@ -53,26 +53,28 @@
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.Link)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Size)
+                $@Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SizeUnit)
+                @Html.DisplayFor(modelItem => item.Size) @Html.DisplayFor(modelItem => item.SizeUnit)
             </td>
-            <td>
-                <partial name="_GameImage" model="item" />
-            </td>
+                <td>
+                    <partial name="_GameImage" model="item" />
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+

@@ -7,7 +7,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
@@ -19,7 +19,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Games.FirstOrDefault().Genre)
             </th>
-            <th>
+            <th class="price">
                 @Html.DisplayNameFor(model => model.Games.FirstOrDefault().Price)
             </th>
             <th>
@@ -50,7 +50,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Genre)
                 </td>
-                <td>
+                <td class="dollar">
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
@@ -60,7 +60,7 @@
                     @Html.DisplayFor(modelItem => item.SizeUnit)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Photo)
+                    <partial name="_GameImage" model="item" />
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Category.Name)

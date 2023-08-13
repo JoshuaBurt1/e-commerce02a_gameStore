@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Mage.Controllers
 {
-    [Authorize(Roles = "Administrator")]
-    public class GamesController : Controller
+	[Authorize(Roles = "Administrator")]
+	public class GamesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
@@ -24,8 +24,8 @@ namespace Mage.Controllers
         // GET: Games
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Games.Include(g => g.Category).OrderBy(g => g.Name);
-            return View(await applicationDbContext.ToListAsync());
+			var applicationDbContext = _context.Games.Include(g => g.Category).OrderBy(g => g.Name);
+			return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Games/Details/5
@@ -51,8 +51,8 @@ namespace Mage.Controllers
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
-            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
-            return View();
+			ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
+			return View();
         }
 
         // POST: Games/Create
@@ -60,18 +60,18 @@ namespace Mage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CategoryId,Name,Description,Genre,Price,Size,SizeUnit")] Game game, IFormFile? Photo)
+        public async Task<IActionResult> Create([Bind("Id,CategoryId,Name,Description,Genre,Link,Price,Size,SizeUnit,Photo")] Game game, IFormFile? Photo)
         {
             if (ModelState.IsValid)
             {
-                game.Photo = await UploadPhoto(Photo);
-                _context.Add(game);
+				game.Photo = await UploadPhoto(Photo);
+				_context.Add(game);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
-            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
-            return View(game);
+			ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
+			return View(game);
         }
 
         // GET: Games/Edit/5
@@ -88,8 +88,8 @@ namespace Mage.Controllers
                 return NotFound();
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
-            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
-            return View(game);
+			ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
+			return View(game);
         }
 
         // POST: Games/Edit/5
@@ -97,7 +97,7 @@ namespace Mage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoryId,Name,Description,Genre,Price,Size,SizeUnit,Photo")] Game game)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoryId,Name,Description,Genre,Link,Price,Size,SizeUnit,Photo")] Game game)
         {
             if (id != game.Id)
             {
@@ -125,8 +125,8 @@ namespace Mage.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", game.CategoryId);
-            ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
-            return View(game);
+			ViewData["SizeUnit"] = new SelectList(Enum.GetValues(typeof(GameSizeUnit)));
+			return View(game);
         }
 
         // GET: Games/Delete/5
@@ -171,22 +171,22 @@ namespace Mage.Controllers
         {
           return (_context.Games?.Any(e => e.Id == id)).GetValueOrDefault();
         }
-        private async Task<string?> UploadPhoto(IFormFile photo)
-        {
-            if (photo != null)
-            {
-                //get temp location
-                var filePath =Path.GetTempFileName();
-                //create unique name
-                var fileName = Guid.NewGuid() + "-" + photo.FileName;
-                //Set the desitination dynamically
-                var uploadPath = System.IO.Directory.GetCurrentDirectory() + "\\wwwroot\\images\\games\\" + fileName;
-                //Execute the file copy
-                using var stream = new FileStream(uploadPath, FileMode.Create);
-                await photo.CopyToAsync(stream);
-                return fileName;
-            }
-            return null;
-        }
-    }
+		private async Task<string?> UploadPhoto(IFormFile photo)
+		{
+			if (photo != null)
+			{
+				//get temp location
+				var filePath = Path.GetTempFileName();
+				//create unique name
+				var fileName = Guid.NewGuid() + "-" + photo.FileName;
+				//Set the desitination dynamically
+				var uploadPath = System.IO.Directory.GetCurrentDirectory() + "\\wwwroot\\images\\games\\" + fileName;
+				//Execute the file copy
+				using var stream = new FileStream(uploadPath, FileMode.Create);
+				await photo.CopyToAsync(stream);
+				return fileName;
+			}
+			return null;
+		}
+	}
 }

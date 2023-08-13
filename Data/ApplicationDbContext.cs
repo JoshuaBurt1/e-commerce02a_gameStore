@@ -13,7 +13,7 @@ namespace Mage.Data
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

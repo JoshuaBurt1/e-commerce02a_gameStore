@@ -26,6 +26,9 @@
                 @Html.DisplayNameFor(model => model.PaymentMethod)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ShippingCost)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.User)
             </th>
             <th>
@@ -48,6 +51,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PaymentMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippingCost)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.User.Id)

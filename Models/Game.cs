@@ -4,10 +4,10 @@ namespace Mage.Models
 {
     public enum GameSizeUnit //predefined values for size
     {
-        Bytes,
-        Kilobytes,
-        Megabytes,
-        Gigabytes
+        B,
+        kB,
+        MB,
+        GB
     }
     public class Game
     {
@@ -26,7 +26,10 @@ namespace Mage.Models
 
         public string? Genre { get; set; }
 
-        [Required()]
+		[Required]
+		public string Link { get; set; }
+
+		[Required()]
         public decimal Price { get; set; }
 
         [Required()]

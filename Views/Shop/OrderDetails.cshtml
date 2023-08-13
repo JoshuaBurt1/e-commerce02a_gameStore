@@ -12,8 +12,9 @@
         <thead>
             <tr>
                 <th>Game Name</th>
+                <th>Link</th>
                 <th>Quantity</th>
-                <th>Price</th>
+                <th>Price</th>doc
                 <th>Subtotal</th>
                 <th></th>
             </tr>
@@ -24,16 +25,17 @@
                 var subtotal = cartItem.Quantity * cartItem.Price;
                 <tr>
                     <td>@cartItem.Game.Name</td>
+                    <td><a href=@cartItem.Game.Link target="_blank">@cartItem.Game.Name</a></td>
                     <td>@cartItem.Quantity</td>
-                    <td>@cartItem.Price</td>
-                    <td style="text-align: right">@subtotal</td>
+                    <td class="dollar">@cartItem.Price</td>
+                    <td class="dollar" style="text-align: right">@subtotal</td>
                 </tr>
             }
         </tbody>
         <tfoot>
             <tr>
                 <th>Total:</th>
-                <td colspan="3" style="text-align: right">@Model.Total</td>
+                <td class="dollar" colspan="3" style="text-align: right">@Model.Total</td>
                 <td></td>
             </tr>
         </tfoot>

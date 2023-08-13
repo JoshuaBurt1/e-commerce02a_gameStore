@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Stripe;
 using Stripe.BillingPortal;
 using Stripe.Checkout;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
+using Microsoft.AspNetCore.Http;
 
 namespace MajorGamer.Controllers
 {
@@ -112,11 +114,34 @@ namespace MajorGamer.Controllers
             return NotFound();
         }
 
+        //Checkout screen
         [Authorize]
-        public async Task<IActionResult> Checkout()
+        public async Task<IActionResult> Checkout(ShippingCost shippingCost)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var cart = await _context.Carts.Include(cart => cart.User).Include(cart => cart.CartItems).ThenInclude(cartItem => cartItem.Game).FirstOrDefaultAsync(cart => cart.UserId == userId && cart.Active == true);
+            /*
+            HttpContext.Session.SetString("ShippingCost", shippingCost.ToString());
+            var shippingCostNum = 0;
+            if (shippingCost.ToString() == "Standard")
+            {
+                shippingCostNum = 10;
+            }
+            if (shippingCost.ToString() == "Expedited")
+            {
+                shippingCostNum = 20;
+            }
+            if (shippingCost.ToString() == "SameDay")
+            {
+                shippingCostNum = 30;
+            }
+            if (shippingCost.ToString() == "International")
+            {
+                shippingCostNum = 40;
+            }
+            // add to Total: shippingCostNum
+            */
+
 
             var order = new Order
             {
@@ -127,11 +152,15 @@ namespace MajorGamer.Controllers
                 PaymentMethod = PaymentMethods.VISA,
             };
             ViewData["PaymentMethods"] = new SelectList(Enum.GetValues(typeof(PaymentMethods)));
+            ViewData["ShippingCost"] = new SelectList(Enum.GetValues(typeof(ShippingCost)));
+
             return View(order);
         }
+
+        //Stripe Payment screen
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Payment(string shippingAddress, PaymentMethods paymentMethod)
+        public async Task<IActionResult> Payment(ShippingCost shippingCost, string shippingAddress, PaymentMethods paymentMethod)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var cart = await _context.Carts.Include(cart => cart.CartItems).FirstOrDefaultAsync(cart => cart.UserId == userId && cart.Active == true);
@@ -139,6 +168,26 @@ namespace MajorGamer.Controllers
             //Add order data to the session
             HttpContext.Session.SetString("ShippingAddress", shippingAddress);
             HttpContext.Session.SetString("PaymentMethod", paymentMethod.ToString());
+
+            HttpContext.Session.SetString("ShippingCost", shippingCost.ToString());
+            var shippingCostNum = 0;
+            if (shippingCost.ToString() == "Standard")
+            {
+                shippingCostNum = 10;
+            }
+            if (shippingCost.ToString() == "Expedited")
+            {
+                shippingCostNum = 20;
+            }
+            if (shippingCost.ToString() == "SameDay")
+            {
+                shippingCostNum = 30;
+            }
+            if (shippingCost.ToString() == "International")
+            {
+                shippingCostNum = 40;
+            }
+
             //Set Stripe API key
             StripeConfiguration.ApiKey = _configuration.GetSection("Stripe")["SecretKey"];
             //Create our Stripe options
@@ -150,7 +199,7 @@ namespace MajorGamer.Controllers
                     {
                         PriceData = new SessionLineItemPriceDataOptions
                         {
-                            UnitAmount = (long)(cart.CartItems.Sum(cartItem => cartItem.Quantity * cartItem.Price) * 100),
+                            UnitAmount = (long)((cart.CartItems.Sum(cartItem => cartItem.Quantity * cartItem.Price)+shippingCostNum) * 100 ),
                             Currency = "cad",
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
@@ -180,6 +229,8 @@ namespace MajorGamer.Controllers
             //Get our data out of the session
             var paymentMethod = HttpContext.Session.GetString("PaymentMethod");
             var shippingAddress = HttpContext.Session.GetString("ShippingAddress");
+            ////////////////////////////////////
+
             var order = new Order
             {
                 UserId = userId,
