@@ -14,8 +14,7 @@
                 <th>Game Name</th>
                 <th>Link</th>
                 <th>Quantity</th>
-                <th>Price</th>doc
-                <th>Subtotal</th>
+                <th>Price</th>
                 <th></th>
             </tr>
         </thead>
@@ -28,15 +27,22 @@
                     <td><a href=@cartItem.Game.Link target="_blank">@cartItem.Game.Name</a></td>
                     <td>@cartItem.Quantity</td>
                     <td class="dollar">@cartItem.Price</td>
-                    <td class="dollar" style="text-align: right">@subtotal</td>
                 </tr>
             }
+            <tr>
+                <th>Subtotal:</th>
+                <td id="subtotal" class="dollar" colspan="3" style="text-align: right"></td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
+                <th>Shipping:</th>
+                <td id="shipping" colspan="2">@Model.ShippingCost</td>
+                <td id="shippingCost" class="dollar" style="text-align: right"></td>
+            </tr>
+            <tr>
                 <th>Total:</th>
-                <td class="dollar" colspan="3" style="text-align: right">@Model.Total</td>
-                <td></td>
+                <td id="total" class="dollar" colspan="3" style="text-align: right">@Model.Total</td>
             </tr>
         </tfoot>
     </table>
@@ -46,3 +52,27 @@
 <div>
     <a asp-action="Index">Back to Categories</a>
 </div>
+
+
+<script>
+    const shipping = document.getElementById("shipping");
+    const shippingMenuOptions = document.getElementById("shippingMenuOptions");
+    var shippingCost = document.getElementById("shippingCost");
+    const subtotal = document.getElementById("subtotal");
+    var total = document.getElementById("total");
+    var selectedOption;
+
+    var shippingString = ["Standard", "Expedited", "SameDay", "International"];
+    var shippingCostAmount = [10.00, 20.00, 30.00, 40.00];
+
+    //inital cost added
+    console.log(shipping.textContent);
+    for(let i = 0;i<shippingString.length;i++){
+        if (shipping.textContent == shippingString[i]) {
+            shippingCost.textContent = shippingCostAmount[i];
+        }
+    }
+    subtotal.textContent = (parseFloat(total.textContent) - parseFloat(shippingCost.textContent));
+    console.log(subtotal.textContent);
+</script>
+

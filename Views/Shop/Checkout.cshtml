@@ -13,8 +13,7 @@
             <tr>
                 <th>Game Name</th>
                 <th>Quantity</th>
-                <th>Price</th>
-                <th style="text-align: right">Subtotal</th>
+                <th>Price</th>  
                 <th></th>
             </tr>
         </thead>
@@ -26,7 +25,7 @@
                     <td>@cartItem.Game.Name</td>
                     <td>@cartItem.Quantity</td>
                     <td class="dollar">@cartItem.Price</td>
-                    <td class="dollar" style="text-align: right">@subtotal</td>
+                    <td></td>
                 </tr>
             }
             <tr>
@@ -38,11 +37,11 @@
             <tr>
                 <th>Shipping:</th>
                 <td id="shipping" colspan="2" >@Model.ShippingCost</td>
-                <td id="shippingCost" class="dollar" colspan="3" style="text-align: right"></td>
+                <td id="shippingCost" class="dollar" style="text-align: right"></td>
             </tr>
             <tr>
                 <th>Total:</th>
-                <td id="total" class="dollar" colspan="3" style="text-align: right"></td>
+                <td id="total" class="dollar" colspan="3" style="text-align: right">@Model.Total</td>
             </tr>
         </tfoot>
     </table>

@@ -35,8 +35,8 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td class ="dollar">
-                    @Html.DisplayFor(modelItem => item.Total)
+                <td>
+                    $@Html.DisplayFor(modelItem => item.Total)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ShippingAddress)

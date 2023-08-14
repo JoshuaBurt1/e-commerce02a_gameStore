@@ -114,35 +114,13 @@ namespace MajorGamer.Controllers
             return NotFound();
         }
 
-        //Checkout screen
+        //Checkout screen, do not modify
         [Authorize]
-        public async Task<IActionResult> Checkout(ShippingCost shippingCost)
+        public async Task<IActionResult> Checkout()
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var cart = await _context.Carts.Include(cart => cart.User).Include(cart => cart.CartItems).ThenInclude(cartItem => cartItem.Game).FirstOrDefaultAsync(cart => cart.UserId == userId && cart.Active == true);
-            /*
-            HttpContext.Session.SetString("ShippingCost", shippingCost.ToString());
-            var shippingCostNum = 0;
-            if (shippingCost.ToString() == "Standard")
-            {
-                shippingCostNum = 10;
-            }
-            if (shippingCost.ToString() == "Expedited")
-            {
-                shippingCostNum = 20;
-            }
-            if (shippingCost.ToString() == "SameDay")
-            {
-                shippingCostNum = 30;
-            }
-            if (shippingCost.ToString() == "International")
-            {
-                shippingCostNum = 40;
-            }
-            // add to Total: shippingCostNum
-            */
-
-
+        
             var order = new Order
             {
                 UserId = userId,
@@ -157,7 +135,7 @@ namespace MajorGamer.Controllers
             return View(order);
         }
 
-        //Stripe Payment screen
+        //Stripe Payment screen, modify for shipping
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> Payment(ShippingCost shippingCost, string shippingAddress, PaymentMethods paymentMethod)
@@ -167,9 +145,8 @@ namespace MajorGamer.Controllers
             if (cart == null) return NotFound();
             //Add order data to the session
             HttpContext.Session.SetString("ShippingAddress", shippingAddress);
-            HttpContext.Session.SetString("PaymentMethod", paymentMethod.ToString());
-
             HttpContext.Session.SetString("ShippingCost", shippingCost.ToString());
+            HttpContext.Session.SetString("PaymentMethod", paymentMethod.ToString());
             var shippingCostNum = 0;
             if (shippingCost.ToString() == "Standard")
             {
@@ -222,21 +199,41 @@ namespace MajorGamer.Controllers
             Response.Headers.Add("Location", session.Url);
             return new StatusCodeResult(303);
         }
-        public async Task<IActionResult> SaveOrder()
+        public async Task<IActionResult> SaveOrder(ShippingCost shippingCost)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var cart = await _context.Carts.Include(cart => cart.CartItems).FirstOrDefaultAsync(cart => cart.UserId == userId && cart.Active == true);
             //Get our data out of the session
             var paymentMethod = HttpContext.Session.GetString("PaymentMethod");
             var shippingAddress = HttpContext.Session.GetString("ShippingAddress");
+            var shipCost = HttpContext.Session.GetString("ShippingCost");
+            var shippingCostNum = 0;
+            if (shipCost.ToString() == "Standard")
+            {
+                shippingCostNum = 10;
+            }
+            if (shipCost.ToString() == "Expedited")
+            {
+                shippingCostNum = 20;
+            }
+            if (shipCost.ToString() == "SameDay")
+            {
+                shippingCostNum = 30;
+            }
+            if (shipCost.ToString() == "International")
+            {
+                shippingCostNum = 40;
+            }
+
             ////////////////////////////////////
 
             var order = new Order
             {
                 UserId = userId,
                 Cart = cart,
-                Total = cart.CartItems.Sum(cartItem => cartItem.Quantity * cartItem.Price),
+                Total = cart.CartItems.Sum(cartItem => cartItem.Quantity * cartItem.Price)+ shippingCostNum,
                 ShippingAddress = shippingAddress,
+                ShippingCost = (ShippingCost)Enum.Parse(typeof(ShippingCost), shipCost),
                 PaymentMethod = (PaymentMethods)Enum.Parse(typeof(PaymentMethods), paymentMethod),
                 PaymentReceived = true
             };
