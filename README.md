@@ -5,4 +5,5 @@ that will assist in their career, education, and in their understanding of reali
 
 Link to site: https://mage2084.azurewebsites.net
 (Azure ran out of credits Aug-17, will transfer to new hosting site)
+https://mage2084b.azurewebsites.net/
 
